@@ -19,19 +19,18 @@ as well as relevant examples in the documentation are all labeled as beta.
 
 | *Component currently in beta* | inital @patternfly/patternfly milestone | inital @patternfly/patternfly-react milestone |
 | ----------------------------| ----------------------------------------| ----------------------------------------------|
-| Back to top | 2021.11 | 2021.12 |
 | Calendar month | 2020.15 | 2020.15 |
 | DataList: draggable | 2021.12 | 2020.13 |
 | Date picker | 2020.13 | 2020.15 |
 | Drag and drop | 2021.13 | 2021.14 |
 | Dual list selector | 2020.15 | 2020.15 |
-| Jump links | 2020.14 | 2020.15 |
 | Label: Editable | 2021.07 | 2021.10 |
 | LabelGroup | 2020.11 | 2020.12 |
 | Masthead | 2021.02 | 2021.11 |
 | Menu: flyout | 2020.11 | 2021.10 |
 | Menu: drilldown | 2020.11 | 2021.03 |
 | Menu Toggle | 2021.02 | 2021.06 |
+| Multiple file upload | 2021.16 | 2022.02 |
 | Nav: flyout | 2021.13 | 2021.13 |
 | Nav: drilldown | 2021.12 | --
 | NotificationDrawer | 2020.01 | 2020.06 |
@@ -47,5 +46,6 @@ as well as relevant examples in the documentation are all labeled as beta.
 | Tile | 2020.09 | 2020.11 |
 | TimePicker | -- | 2020.16 |
 | TreeView | 2020.10 | 2020.11 |
+| Truncate | 2021.16 | 2022.01 | 
 
 
