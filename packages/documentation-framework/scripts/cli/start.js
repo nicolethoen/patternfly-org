@@ -7,6 +7,7 @@ const { watchMD } = require('../md/parseMD');
 
 function startDevServer(webpackConfig) {
   webpackConfig.devServer.static = false;
+  webpackConfig.output.clean = false;
   const { port } = webpackConfig.devServer;
   const compiler = rspack(webpackConfig);
   const server = new RspackDevServer(webpackConfig.devServer, compiler);

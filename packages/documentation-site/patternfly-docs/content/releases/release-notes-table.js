@@ -238,9 +238,9 @@ export const ReleaseNotesTable = () => {
           <ToolbarItem variant="search-filter">{buildSearch()}</ToolbarItem>
           <ToolbarGroup variant="filter-group">
             <ToolbarFilter
-              chips={filters}
-              deleteChip={(_category, chip) => onSelect(null, chip)}
-              deleteChipGroup={(_category) => setFilters([])}
+              labels={filters}
+              deleteLabel={(_category, label) => onSelect(null, label)}
+              deleteLabelGroup={(_category) => setFilters([])}
               categoryName="Filters"
             >
               {buildFilter()}
@@ -264,7 +264,7 @@ export const ReleaseNotesTable = () => {
           >
             <Thead>
               <Tr>
-                <Th width={9} />
+                <Th width={9} screenReaderText="Row expansion" />
                 <Th width={9} sort={getSortParams(0)}>
                   Component
                 </Th>

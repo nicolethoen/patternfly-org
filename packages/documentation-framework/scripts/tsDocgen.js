@@ -44,12 +44,10 @@ function addAnnotations(prop) {
 function getComponentMetadata(filename, sourceText) {
   let parsedComponents = null;
   try {
-    parsedComponents = reactDocgen.parse(
-      sourceText,
-      reactDocgen.resolver.findAllExportedComponentDefinitions,
-      null,
-      { filename }
-    );
+    parsedComponents = reactDocgen.parse(sourceText, {
+      resolver: new reactDocgen.builtinResolvers.FindExportedDefinitionsResolver(),
+      filename
+    });
   } catch (err) {
     // eslint-disable-next-line no-console
     // console.warn(`No component found in ${filename}:`, err);

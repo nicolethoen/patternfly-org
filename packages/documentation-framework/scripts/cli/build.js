@@ -35,7 +35,7 @@ async function buildWebpack(webpackConfig) {
       }
     
       if (stats.hasWarnings()) {
-        console.warn(info.warnings.join('\n'));
+        console.warn(info.warnings.map(w => w.message || w).join('\n'));
       }
 
       res();
