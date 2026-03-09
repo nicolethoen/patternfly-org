@@ -9,9 +9,9 @@ program
 program
   .command('generate')
   .description('generates source files')
-  .action(options => {
+  .action(async options => {
     const { generate } = require('./generate');
-    generate(options);
+    await generate(options);
   });
 
 program

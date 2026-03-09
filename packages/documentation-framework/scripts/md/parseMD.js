@@ -19,6 +19,7 @@ const outputBase = path.join(process.cwd(), `patternfly-docs/generated`);
 const tsDocs = {};
 let functionDocs = {};
 const routes = {};
+const pendingProps = [];
 const globs = {
   props: [],
   md: [],
@@ -267,8 +268,8 @@ function toReactComponent(mdFilePath, source, buildMode) {
   };
 }
 
-function sourcePropsFile(file) {
-  tsDocgen(file)
+async function sourcePropsFile(file) {
+  (await tsDocgen(file))
     .filter(({ hide }) => !hide)
     .forEach(({ name, description, props }) => {
       tsDocs[getTsDocName(name, getTsDocNameVariant(file))] = { name, description, props };
@@ -345,7 +346,11 @@ function getTsDocNameVariant(source) {
 module.exports = {
   sourceProps(glob, ignore) {
     globs.props.push({ glob, ignore });
-    globSync(glob, { ignore }).forEach(sourcePropsFile);
+    const promise = Promise.all(globSync(glob, { ignore }).map(sourcePropsFile));
+    pendingProps.push(promise);
+  },
+  async waitForProps() {
+    await Promise.all(pendingProps);
   },
   sourceMD(glob, source, ignore, buildMode) {
     globs.md.push({ glob, source, ignore });
