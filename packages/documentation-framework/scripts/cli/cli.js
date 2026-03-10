@@ -17,9 +17,9 @@ program
 program
   .command('start')
   .description('generates source files and runs webpack-dev-server')
-  .action(options => {
+  .action(async options => {
     const { start } = require('./start');
-    start(options);
+    await start(options);
   });
 
 program

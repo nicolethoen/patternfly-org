@@ -353,16 +353,25 @@ module.exports = {
     await Promise.all(pendingProps);
   },
   sourceMD(glob, source, ignore, buildMode) {
-    globs.md.push({ glob, source, ignore });
-    globSync(glob, { ignore }).forEach(file => sourceMDFile(file, source, buildMode));
+    globs.md.push({ glob, source, ignore, buildMode });
+  },
+  processMD() {
+    globs.md.forEach(({ glob, source, ignore, buildMode }) => {
+      globSync(glob, { ignore }).forEach(file => sourceMDFile(file, source, buildMode));
+    });
   },
   sourceFunctionDocs,
   writeIndex,
   watchMD() {
     globs.props.forEach(({ glob, ignore }) => {
       const propWatcher = chokidar.watch(globSync(glob, { ignored: ignore, ignoreInitial: true}));
-      propWatcher.on('add', sourcePropsFile);
-      propWatcher.on('change', sourcePropsFile);
+      const onPropFile = (file) => {
+        sourcePropsFile(file).catch((err) => {
+          console.error('Error updating props from', file, err);
+        });
+      };
+      propWatcher.on('add', onPropFile);
+      propWatcher.on('change', onPropFile);
     });
     globs.md.forEach(({ glob, source, ignore }) => {
       const mdWatcher = chokidar.watch(globSync(glob, { ignored: ignore, ignoreInitial: true }));
