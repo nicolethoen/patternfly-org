@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.38.0 (2026-04-14)
+
+
+### Features
+
+* **site:** update doc-core to 1.22.0 ([#4946](https://github.com/patternfly/patternfly-org/issues/4946)) ([fc290d0](https://github.com/patternfly/patternfly-org/commit/fc290d030bc34d1728fc9a3948fed4e5b4be5df3))
+
+
+
+
+
 # 6.37.0 (2026-04-06)
 
 
