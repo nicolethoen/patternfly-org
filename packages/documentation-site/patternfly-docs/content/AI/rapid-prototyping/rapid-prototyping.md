@@ -2,7 +2,6 @@
 id: Rapid prototyping
 section: AI
 source: about-rapid-prototyping
-sortValue: 2
 ---
 
 # Rapid prototyping with AI-assisted PatternFly development
