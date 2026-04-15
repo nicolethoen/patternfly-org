@@ -194,3 +194,6 @@ Icons are optional in modal dialogs. Use or omit them as your use case requires.
 | <span style="color: rgb(240, 171, 0)" aria-label="warning" role="img"> <i class="fas fa-exclamation-triangle" /> </span> | **Warning:** Cautions or warns the user of a permanent action, or that information will be deleted upon action completion | Add to confirmation dialogs or passive dialogs to indicate a higher level of urgency and importance.|
 | <span style="color: rgb(201, 25, 11)" aria-label="critical warning" role="img"> <i class="fas fa-exclamation-circle" /> </span> | **Critical Warning:** Indicates that an error has occured  | Add to error dialogs. |
 | <span style="color: rgb(43, 154, 243)" aria-label="acknowledgement" role="img"> <i class="fas fa-info-circle" /> </span> | **Acknowledgement:** Informs the user of an action or result  | Add to confirmation or passive dialogs to indicate a lower level of urgency. |
+
+## Accessibility
+For information regarding accessibility, visit the [modal accessibility](/components/modal/accessibility) tab.

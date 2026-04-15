@@ -201,7 +201,7 @@
   },
   "menu-toggle": {
     "illustration": "./img/component-illustrations/menu-toggle.png",
-    "summary": "A <b>menu toggle</b> is a selectable control that opens and closes a menu."
+    "summary": "A <b>menu toggle</b> is a selectable control that opens and closes a <Link to='/components/menus/dropdown'>dropdown</Link>, <Link to='/components.menus/select'>select</Link>, or <Link to='/components/menus/menu'>menu</Link> component."
   },
   "menu": {
     "illustration": "./img/component-illustrations/menu.png",
@@ -321,7 +321,7 @@
   },
   "text-area": {
     "illustration": "./img/component-illustrations/text-area.png",
-    "summary": "A <b>text area</b> allows users to enter a longer paragraph of text."
+    "summary": "Most commonly used in  <Link to='/components/forms/form'>forms</Link>, a <b>text area</b> allows users to enter a longer paragraph of text."
   },
   "text-input-group": {
     "illustration": "./img/component-illustrations/text-input-group.png",
